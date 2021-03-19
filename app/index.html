@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat app</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="123.png" />
+  <style>
+    * {
+      font-family: 'Crimson Text', serif;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CHAT APP</h1>
+  <h3>Enter your name</h3>
+  <input class="name"></br></br>
+  <button onclick="getName()"><a href="chat.html">Lets go</a></button>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="myscripts.js"></script>
+  <script>document.querySelector(".name").value = readName();</script>
+</body>
+
+
+</html>

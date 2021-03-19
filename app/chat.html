@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat APP</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="123.png" />
+</head>
+
+<body>
+
+    <div id="messages"></div>
+
+    <form id="form" action="">
+        <div class="defDiv">
+            <span class="span1" onclick="typeEmoji(0)">😀</span>
+            <span class="span2" onclick="typeEmoji(1)">😁</span>
+            <span class="span3" onclick="typeEmoji(2)">🤗</span>
+            <span class="span4" onclick="typeEmoji(3)">🙂</span>
+            <span class="span5" onclick="typeEmoji(4)">😘</span>
+        </div>
+        <button onclick="showEmoji()">+</button>
+        <input id="input" autocomplete="off" onclick="closeEmojiPopUp()" />
+        <button onclick="clearInput();sendMessage()">Send</button>
+        <div class="inputFileButton"><button class="buttonForPhoto">Add photo</button></div>
+        <input type="file" id="html_btn" class="photoAdd" onchange="encodeImageFileAsURL(this)" />
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="myscripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $('.inputFileButton').click(function () {
+            $('#html_btn').click();
+        });</script>
+
+</body>
+
+</html>
